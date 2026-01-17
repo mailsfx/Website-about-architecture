@@ -9,23 +9,29 @@
 	<link rel="stylesheet" href="assets/fonts/roboto/stylesheet.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
+<body id="home">
 <!-- ============== HEADER ================ -->
 	<header class="header">
 		<div class="container flex-b">
+			<div class="burger">
+				<div></div>
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
 			<nav class="header-menu">
 				<ul class="header-menu-list flex">
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">ABOUT STUDIO</a>
+						<a href="#about" class="header-menu-link" onclick="fn_close()">ABOUT STUDIO</a>
 					</li>
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">PRICES</a>
+						<a href="#prices" class="header-menu-link" onclick="fn_close()">PRICES</a>
 					</li>
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">PROJECTS</a>
+						<a href="#projects" class="header-menu-link" onclick="fn_close()">PROJECTS</a>
 					</li>
 					<li class="header-menu-item">
-						<a href="#" class="header-menu-link">CONTACTS</a>
+						<a href="#contacts" class="header-menu-link" onclick="fn_close()">CONTACTS</a>
 					</li>
 				</ul>
 			</nav>
@@ -46,8 +52,8 @@
 				<button>Submit a request</button>
 			</div>
 		</section>
-<!-- ============== SECTION-2 ================ -->	
-		<section class="section section-2 bg-dark">
+<!-- ============== SECTION-2 ================ -->
+		<section class="section section-2 bg-dark" id="about">
 			<div class="container">
 				<h2 class="title-2">Our Services</h2>
 				<article class="article article-2 flex">
@@ -68,8 +74,8 @@
 				</article>
 			</div>
 		</section>
-<!-- ============== SECTION-3 SLIDER ================ -->			
-		<section class="section section-3">
+<!-- ============== SECTION-3 SLIDER ================ -->
+		<section class="section section-3" id="prices">
 			<div class="container">
 				<h2 class="title-2 dark">Our Projects</h2>
 				<!-- Slider main container -->
@@ -128,8 +134,8 @@
 
 			</div>
 		</section>
-<!-- ============== SECTION-4 ================ -->	
-		<section class="section section-4 bg-dark">
+<!-- ============== SECTION-4 ================ -->
+		<section class="section section-4 bg-dark" id="projects">
 			<div class="container flex-b">
 				<div class="section-4-left-switch">
 					<h2 class="title-2">from request to turnkey delivery</h2>
@@ -166,30 +172,73 @@
 						<p>At the final outfitting stage, we compile specifications for furniture, lighting, and interior items</p>
 					</div>
 				</div>
-				<div class="section-4-right-img"></div>
+				<div class="section-4-right-img">
+					<div class="section-4-item-mob _active">
+						<h3>We receive your request</h3>
+						<p>Call us or send a message through the website</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>Let’s get acquainted</h3>
+						<p>During the first meeting, we will discuss all the details of your project</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>We visit the site</h3>
+						<p>We meet on-site to take necessary measurements, conduct a photo survey, and complete a detailed technical brief</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>We discuss and agree on the overall project budget</h3>
+						<p>Costs for interior elements, finishing materials, furniture, and equipment</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>We define the layout solution</h3>
+						<p>At this stage, we offer several options for zoning, furniture placement, and equipment layout</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>We develop the design concept</h3>
+						<p>Based on your tastes and taking into account current trends and directions, we define the style of your future interior</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>We prepare the working documentation</h3>
+						<p>At the next stage, we prepare all the necessary working drawings</p>
+					</div>
+					<div class="section-4-item-mob">
+						<h3>Project outfitting</h3>
+						<p>At the final outfitting stage, we compile specifications for furniture, lighting, and interior items</p>
+					</div>
+				</div>
+				<div class="section-4-buttons-mobile flex-c">
+						<div class="section-4-mob-btn">1</div>
+						<div class="section-4-mob-btn">2</div>
+						<div class="section-4-mob-btn">3</div>
+						<div class="section-4-mob-btn">4</div>
+						<div class="section-4-mob-btn">5</div>
+						<div class="section-4-mob-btn">6</div>
+						<div class="section-4-mob-btn">7</div>
+						<div class="section-4-mob-btn">8</div>
+					</div>
 				<div class="section-4-line"></div>
 			</div>
 		</section>
-<!-- ============== SECTION-5 ================ -->	
-		<section class="section section-5">
+<!-- ============== SECTION-5 ================ -->
+<section class="section section-5" id="contacts">
 			<div class="container">
-				<h2 class="title-2 dark">Get a catalog of our<br>projects</h2>
+				<h2 class="title-2 dark">Get a catalog of our projects</h2>
 				<div class="section-5-box flex">
 					<img src="assets/img/img-5.webp" alt="img-5" width="820" height="458">
 					<form class="section-5-form">
 						<h3 class="title-3 dark">Leave your email to receive our project catalog</h3>
 						<h4 class="dark">The catalog will help you choose a style and plan your layout</h4>
-						<input type="text" name="mail-5" placeholder="Enter your email" class="section-5-input"><br>
+						<input type="text" name="mail-5" placeholder="Enter your email" class="section-5-input" required><br>
 						<div class="section-5-check-cont flex">
-							<input type="checkbox" name="cneck-5" class="section-5-check">
+							<input type="checkbox" name="cneck-5" class="section-5-check" required>
 							<span class="text dark">I agree to the processing of personal data</span>
 						</div>
 						<input type="submit" value="Get the catalog" class="section-5-submit">
 					</form>
 				</div>
 			</div>
+			<!-- ============== SECTION-6 ================ -->
 		</section>
-<!-- ============== SECTION-6 ================ -->	
 		<div class="section section-6">
 			<div class="container flex-c">
 				<a href="#">
@@ -229,11 +278,12 @@
 			</div>
 		</section>
 	</main>
+	</main>
 <!-- ============== FOOTER ================ -->	
-	<footer class="footer bg-dark">
+<footer class="footer bg-dark">
 		<div class="container flex">
 			<div class="footer-left">
-				<a href="#" class="footer-logo">Forma<br>Studio</a>
+				<a href="#home" class="footer-logo">Forma<br>Studio</a>
 				<p>&copy;<span>2010-2025 Bureau</span></p>
 			</div>
 			<div class="footer-right">
@@ -268,29 +318,43 @@
 					</ul>
 					<ul class="footer-menu-list">
 						<li class="footer-menu-item">
-							<a href="mailto:formastudio@gmail.com" class="footer-menu-link">formastudio@gmail.com</a>
+							<a href="mailto:formastudio@gmail.com" class="footer-menu-link">
+								<img src="assets/img/email.svg" alt="email" width="15" height="15">formastudio@gmail.com
+							</a>
+						</li>
+						<li class="footer-menu-item footer-menu-icons">
+							<a href="#" class="footer-menu-link">
+								<img src="assets/img/insta.svg" alt="insta" width="15" height="15">formastudio
+							</a>
 						</li>
 						<li class="footer-menu-item">
-							<a href="#" class="footer-menu-link">formastudio</a>
+							<a href="#" class="footer-menu-link">
+								<img src="assets/img/fb.svg" alt="fb" width="15" height="15">forma.studio
+							</a>
 						</li>
 						<li class="footer-menu-item">
-							<a href="#" class="footer-menu-link">forma.studio</a>
+							<a href="#" class="footer-menu-link">
+								<img src="assets/img/tlg.svg" alt="tlg" width="15" height="15">@forma.studio
+							</a>
 						</li>
 						<li class="footer-menu-item">
-							<a href="#" class="footer-menu-link">@forma.studio</a>
-						</li>
-						<li class="footer-menu-item">
-							<a href="#" class="footer-menu-link">forma.studio</a>
+							<a href="#" class="footer-menu-link">
+								<img src="assets/img/p.svg" alt="p" width="15" height="15">forma.studio
+							</a>
 						</li>
 					</ul>
 					<ul class="footer-menu-list">
 						<li class="footer-menu-item">
-							<a href="#" class="footer-menu-link">Kyiv, 14<br>Teatralna Street</a>
+							<a href="#" class="footer-menu-link">
+								<img src="assets/img/loc.svg" alt="loc" width="15" height="15">Kyiv, 14<br>Teatralna Street
+							</a>
 						</li>
 						<li class="footer-menu-item">
-							<a href="tel:+380682554585" class="footer-menu-link">+38 (068) 255 45 85</a>
+							<a href="tel:+380682554585" class="footer-menu-link">
+								<img src="assets/img/tel.svg" alt="tel" width="15" height="15">+38 (068) 255 45 85
+							</a>
 						</li>
-						<li class="footer-menu-item">
+						<li class="footer-menu-item"><p class="footer-br"></p>
 							<p>Working hours:<br>Mon–Fri<br>from 9:00 до 17:00</p>
 						</li>
 					</ul>
@@ -298,7 +362,8 @@
 			</div>
 		</div>
 	</footer>
-
+	<!-- ============== FOOTER ================ -->
+	<a href="#home" class="up-arrow">&#9650;</a>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 <script src="assets/js/script.js"></script>
