@@ -1,46 +1,57 @@
-// =============== slider-3 ================ //
-const swiper = new Swiper('.swiper', {
+// ============ anchor-links ==============
+const anchors = document.querySelectorAll('a[href*="#"]');
 
-  direction: 'horizontal',
-  loop: true,
-
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 5
-    },
-    800: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    1600: {
-      slidesPerView: 3,
-      spaceBetween: 20
-    },
+for (anchor of anchors) {
+  if (anchor) {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      anchorId = this.getAttribute('href');
+      if (anchorId != "#")
+      document.querySelector(anchorId).scrollIntoView({
+        behavior: 'smooth', block: 'start'
+      });
+    });
   }
+}
+
+
+// ================= scroll-position ==================
+const upArrow = document.querySelector('.up-arrow');
+
+window.addEventListener('scroll', function () {
+  const scrollPosition = window.scrollY;
+  
+  if (scrollPosition > 600)
+  {
+    upArrow.classList.add('_active');
+    fn_close();
+  }
+  else
+  {
+    upArrow.classList.remove('_active');
+  }
+
 });
 
+// ================= Burger-Button ==================
+const burger = document.querySelector('.burger-btn');
+const menu = document.querySelector('.header_menu');
 
+burger.addEventListener('click', ()=>{
 
-// =============== switcher-4 ================ //
-const img4 = document.querySelector('.section-4-right-img');
-const switches4 = document.querySelectorAll('.section-4-item');
+  burger.classList.toggle('_active');
+  menu.classList.toggle('_active');
 
-switches4.forEach((switch4,index)=>{
-  switch4.addEventListener('click',(e)=>{
-
-    for (let i = switches4.length - 1; i >= 0; i--)
-      switches4[i].classList.remove('_active');
-
-    e.currentTarget.classList.add('_active');
-
-    img4.style.backgroundImage = `url(../arch252/assets/img/img-6-${index+1}.webp)`;
- 
-  });
 });
+
+// ================= Close-Function ==================
+
+function fn_close(){
+  burger.classList.remove('_active');
+  menu.classList.remove('_active');
+}
+
+
+
 
 
